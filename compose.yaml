@@ -1,0 +1,31 @@
+services:
+  django: 
+    build:
+      context: backend
+
+    volumes: 
+      - ./backend/django:/code
+    restart: always
+    ports: 
+      - 8000:8000
+    networks:
+      - main_network
+
+  next:
+    build:
+      context: frontend
+
+    environment:
+      NEXT_PUBLIC_API_DOMAIN: http://django:8000
+
+    volumes:
+      - ./frontend/src:/app/src
+      - ./frontend/public:/app/public
+    restart: always
+    ports:
+      - 3000:3000
+    networks:
+      - main_network
+
+networks:
+  main_network:
