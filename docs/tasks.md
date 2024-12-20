@@ -1,12 +1,16 @@
-# Tasks
-
-### General Instructions
+## General Instructions
 
 The following 3 tasks are to assess your technical skills. Please complete these as if you were assigned them as part of your day job here at MBA. This means working towards best-practices as you understand them.
 
 - Feel free to use Google, SO, ChatGPT, or any other public tools you’re used to using in your workflow.
 - Overall quality, structure, and cleanliness of code will be a factor, so don’t rush it.
 - Use of version control will also be reviewed.
+
+## Timing
+We've designed this test to take around _**4 hours**_.
+We'd prefer you to prioritise finishing all the tasks and deliverying a finished product. If there's anywhere you'd have liked to have spent more time, leave a TODO, and we can discuss it in the follow-up interview.
+
+# The Tasks
 
 ### Task 1 - Get everything running
 
