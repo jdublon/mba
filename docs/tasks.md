@@ -22,7 +22,7 @@ We'd prefer you to prioritise finishing all the tasks and deliverying a finished
 
 1. **Presentation**
     1. Follow the design in [this Figma file](https://www.figma.com/design/POmvDYgMSF1ORiKWv7RDsz/Product-Hero) to create the Hero section for the product page
-        - Tailwind is installed for your convenience. Feel free to use it, or install your own css framework, or use plain ol' css.
+        - Tailwind is installed and pre-configured for your convenience. Feel free to use it, or install your own css framework, or use plain ol' css.
         - Fonts are preinstalled using next/font
         - Each product can use the same hero image, which is hosted in the public folder of the next application.
     2. Add a list underneath the hero to display the product departures
