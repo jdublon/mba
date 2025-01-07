@@ -9,7 +9,10 @@ The following 3 tasks are to assess your technical skills. Please complete these
 ## Figma
 
 You'll need [this Figma file](https://www.figma.com/design/POmvDYgMSF1ORiKWv7RDsz/Product-Hero) for the tasks.
-Note that from the time you request access to ‘dev mode’ on that file, you’ll only have 3 days to complete the task before it locks you out again. 
+
+- Please **email us after you request access**, (the notice is not coming through from Figma for some reason!)
+- Please use your **initials only** as your Figma profile name. If other candidates are on the file at the same time, you'll be able to see your cursors.
+- From the time you request access to ‘dev mode’ on that file, you’ll only have 3 days to complete the task before it locks you out again.
 
 ## Timing
 We've designed this test to take around _**4 hours**_.
