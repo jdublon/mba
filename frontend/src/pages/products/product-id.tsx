@@ -6,15 +6,11 @@ import type {
 import { Product } from "@/types";
 
 export const getStaticPaths = (async () => {
+  // TO DO - fetch all products from django, map each product id to object below
+  const paths = [{ params: { id: "product_id" } }];
   return {
-    paths: [
-      {
-        params: {
-          name: "next.js",
-        },
-      },
-    ],
-    fallback: true,
+    paths,
+    fallback: false,
   };
 }) satisfies GetStaticPaths;
 
