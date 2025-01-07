@@ -4,6 +4,7 @@ import type {
   GetStaticPaths,
 } from "next";
 import { Product } from "@/types";
+import Head from "next/head";
 
 export const getStaticPaths = (async () => {
   // TO DO - fetch all products from django, map each product id to object below
@@ -24,5 +25,13 @@ export const getStaticProps = (async (context) => {
 export default function ProductPage({
   product,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  return <div>{product.name}</div>;
+  // TO DO - edit Head logic once product data available
+  return (
+    <>
+      {/* <Head>
+        {(product.departures === 0 || !!product.departuresFull) && <meta name="robots" content="noindex, nofollow" />}
+      </Head> */}
+      <div>{product.name}</div>
+    </>
+  );
 }
