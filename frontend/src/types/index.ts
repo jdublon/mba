@@ -7,6 +7,10 @@ export type Product = {
   difficulty: Difficulty;
 };
 
+export type AllProductsResponse = {
+  results: Product[];
+};
+
 export type Departure = {
   product: number;
   start_date: string;

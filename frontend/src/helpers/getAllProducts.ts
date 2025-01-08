@@ -1,9 +1,14 @@
 import { Product } from "@/types";
 
 export const getAllProducts = async (): Promise<Product[]> => {
-  // TO DO: move URL to env var
-  const res = await fetch(`http://django:8000/products`);
-  const { results } = await res.json();
+  try {
+    // TO DO: move URL to env var
+    const res = await fetch("http://django:8000/products");
+    const { results } = await res.json();
 
-  return results;
+    return results;
+  } catch (error) {
+    console.log("Error fetching product urls");
+    return [];
+  }
 };
