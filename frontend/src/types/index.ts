@@ -21,3 +21,8 @@ export type Departure = {
 export type AllDeparturesResponse = {
   results: Departure[];
 };
+
+export type DepartureCardProps = {
+  departure: Departure;
+  key: string;
+};
