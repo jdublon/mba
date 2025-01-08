@@ -28,7 +28,8 @@ export const getStaticProps = (async ({ params }) => {
 
   return { props: { product, departures }, revalidate: 60 };
 }) satisfies GetStaticProps<{
-  product: Product;
+  product?: Product;
+  departures?: Departure[];
 }>;
 
 export default function ProductPage({
@@ -47,7 +48,7 @@ export default function ProductPage({
           <meta name="robots" content="noindex, nofollow" />
         )}
       </Head>
-      <div>{product.name}</div>
+      <div>{product?.name}</div>
     </>
   );
 }

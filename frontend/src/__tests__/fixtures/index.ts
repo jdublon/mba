@@ -7,6 +7,8 @@ export const mockProduct: Product = {
   difficulty: "Challenging",
 };
 
+export const mockId: string = "1";
+
 export const mockAllProducts: AllProductsResponse = {
   results: [
     {

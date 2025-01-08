@@ -8,7 +8,7 @@ export const getAllProducts = async (): Promise<Product[]> => {
 
     return results;
   } catch (error) {
-    console.log("Error fetching product urls");
+    console.log(`Error fetching product urls: `, error);
     return [];
   }
 };
