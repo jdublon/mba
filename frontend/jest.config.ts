@@ -3,20 +3,20 @@
  * https://jestjs.io/docs/configuration
  */
 
-import type {Config} from 'jest';
-import nextJest from 'next/jest.js'
+import type { Config } from "jest";
+import nextJest from "next/jest.js";
 
 const createJestConfig = nextJest({
-  dir: './',
-})
+  dir: "./",
+});
 
 const config: Config = {
-  moduleNameMapper: {
-    // ...
-    '@/(.*)$': '<rootDir>/$1',
-  },
   coverageProvider: "v8",
-  testEnvironment: 'jsdom',
+  moduleNameMapper: {
+    "@/(.*)$": "<rootDir>/$1",
+  },
+  testEnvironment: "jsdom",
+  testMatch: ["**/__tests__/*.tests.jsx"],
 };
 
-export default createJestConfig(config)
+export default createJestConfig(config);

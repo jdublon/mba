@@ -16,6 +16,7 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 export const getStaticProps = (async (context) => {
+  // TO DO - get page props by id/slug
   const product = { name: "Product" };
   return { props: { product }, revalidate: 120 };
 }) satisfies GetStaticProps<{
