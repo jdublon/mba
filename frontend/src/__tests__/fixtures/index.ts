@@ -1,4 +1,9 @@
-import { AllProductsResponse, Product } from "@/types";
+import {
+  AllDeparturesResponse,
+  AllProductsResponse,
+  Departure,
+  Product,
+} from "@/types";
 
 export const mockProduct: Product = {
   id: 1,
@@ -31,3 +36,29 @@ export const mockAllProducts: AllProductsResponse = {
     },
   ],
 };
+
+export const mockAllDepartures: AllDeparturesResponse = {
+  results: [
+    {
+      product: 1,
+      start_date: "2025-05-19",
+      price: "3918.00",
+      available_pax: 4,
+    },
+    {
+      product: 1,
+      start_date: "2025-08-10",
+      price: "1715.00",
+      available_pax: 8,
+    },
+    {
+      product: 2,
+      start_date: "2025-11-12",
+      price: "2200.00",
+      available_pax: 3,
+    },
+  ],
+};
+
+export const mockProductOneDepartures: Departure[] =
+  mockAllDepartures.results.filter((d) => d.product === 1);

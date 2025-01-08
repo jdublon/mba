@@ -18,7 +18,7 @@ describe("Helper: getProductById", () => {
     });
   });
 
-  it("SHOULD return an empty array WHEN the fetch fails", async () => {
+  it("SHOULD return undefined WHEN the fetch fails", async () => {
     fetch.once("", { status: 500 });
 
     const res = await getProductById(mockId);

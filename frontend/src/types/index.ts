@@ -17,3 +17,7 @@ export type Departure = {
   price: string;
   available_pax: number;
 };
+
+export type AllDeparturesResponse = {
+  results: Departure[];
+};
