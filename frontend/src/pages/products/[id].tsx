@@ -5,13 +5,14 @@ import type {
 } from "next";
 import { Departure, Product } from "@/types";
 import Head from "next/head";
+import { getProductById } from "@/helpers/getProductById";
+import { getAllProducts } from "@/helpers/getAllProducts";
+import { getDeparturesById } from "@/helpers/getDeparturesById";
 
 export const getStaticPaths = (async () => {
-  // TO DO: move URL to env var
-  const res = await fetch(`http://django:8000/products`);
-  const { results } = await res.json();
+  const allProducts = await getAllProducts();
 
-  const paths = results?.map((product: Product) => ({
+  const paths = allProducts?.map((product: Product) => ({
     params: { id: product.id.toString() },
   }));
 
@@ -22,29 +23,20 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 export const getStaticProps = (async ({ params }) => {
-  // TO DO: move URLs to env var
-  const productRes = await fetch(`http://django:8000/products/${params?.id}`);
-  const product = await productRes.json();
+  const product = await getProductById(params?.id);
+  const departures = await getDeparturesById(params?.id);
 
-  // TO DO: fix the viewset in backend so we can fetch only departures with a particular product id
-  // OR utilise the reverse foreign key serializer to get all departures in same call as above
-  const departuresRes = await fetch(`http://django:8000/departures/`);
-  const allDepartures = await departuresRes.json();
-  const productDepartures = allDepartures?.results?.filter(
-    (d: Departure) => d.product === Number(params?.id)
-  );
-
-  return { props: { product, productDepartures }, revalidate: 120 };
+  return { props: { product, departures }, revalidate: 60 };
 }) satisfies GetStaticProps<{
   product: Product;
 }>;
 
 export default function ProductPage({
   product,
-  productDepartures,
+  departures,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const noDepartures = productDepartures.length === 0;
-  const allDeparturesFull = productDepartures.every(
+  const noDepartures = departures?.length === 0;
+  const allDeparturesFull = departures?.every(
     (d: Departure) => d.available_pax === 0
   );
 
