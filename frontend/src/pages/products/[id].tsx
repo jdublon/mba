@@ -7,7 +7,8 @@ import { Product } from "@/types";
 // import Head from "next/head";
 
 export const getStaticPaths = (async () => {
-  const res = await fetch(`http://127.0.0.1:8000/products`);
+  // TO DO: move URL to env var
+  const res = await fetch(`http://django:8000/products`);
   const { results } = await res.json();
 
   const paths = results?.map((product: Product) => ({
@@ -21,8 +22,14 @@ export const getStaticPaths = (async () => {
 }) satisfies GetStaticPaths;
 
 export const getStaticProps = (async ({ params }) => {
-  const res = await fetch(`http://127.0.0.1:8000/products/${params?.id}`);
-  const product = await res.json();
+  // TO DO: move URLs to env var
+  const productRes = await fetch(`http://django:8000/products/${params?.id}`);
+  const product = await productRes.json();
+
+  // const departuresRes = await fetch(
+  //   `http://django:8000/departures/?product_id=${params?.id}`
+  // );
+  // const departure = await departuresRes.json();
 
   return { props: { product }, revalidate: 120 };
 }) satisfies GetStaticProps<{
@@ -33,6 +40,7 @@ export default function ProductPage({
   product,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   // TO DO - edit Head logic once product data available
+  // console.log(departure);
   return (
     <>
       {/* <Head>

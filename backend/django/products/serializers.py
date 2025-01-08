@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Product
+from .models import Product, Departure
 
 
 class ProductSerializer(serializers.ModelSerializer):
@@ -10,4 +10,15 @@ class ProductSerializer(serializers.ModelSerializer):
             "name",
             "description",
             "difficulty",
+        ]
+
+
+class DepartureSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Departure
+        fields = [
+            "product",
+            "start_date",
+            "price",
+            "available_pax"
         ]
