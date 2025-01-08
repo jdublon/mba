@@ -4,20 +4,26 @@ import type {
   GetStaticPaths,
 } from "next";
 import { Product } from "@/types";
-import Head from "next/head";
+// import Head from "next/head";
 
 export const getStaticPaths = (async () => {
-  // TO DO - fetch all products from django, map each product id to object below
-  const paths = [{ params: { id: "product_id" } }];
+  const res = await fetch(`http://127.0.0.1:8000/products`);
+  const { results } = await res.json();
+
+  const paths = results?.map((product: Product) => ({
+    params: { id: product.id.toString() },
+  }));
+
   return {
-    paths,
+    paths: paths,
     fallback: false,
   };
 }) satisfies GetStaticPaths;
 
-export const getStaticProps = (async (context) => {
-  // TO DO - get page props by id/slug
-  const product = { name: "Product" };
+export const getStaticProps = (async ({ params }) => {
+  const res = await fetch(`http://127.0.0.1:8000/products/${params?.id}`);
+  const product = await res.json();
+
   return { props: { product }, revalidate: 120 };
 }) satisfies GetStaticProps<{
   product: Product;

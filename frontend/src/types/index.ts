@@ -1,1 +1,8 @@
-export type Product = { name: string };
+type Difficulty = "Easy" | "Moderate" | "Challenging" | "Tough";
+
+export type Product = {
+  id: number;
+  name: string;
+  description: string;
+  difficulty: Difficulty;
+};
