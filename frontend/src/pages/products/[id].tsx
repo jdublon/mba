@@ -3,8 +3,8 @@ import type {
   GetStaticProps,
   GetStaticPaths,
 } from "next";
-import { Product } from "@/types";
-// import Head from "next/head";
+import { Departure, Product } from "@/types";
+import Head from "next/head";
 
 export const getStaticPaths = (async () => {
   // TO DO: move URL to env var
@@ -26,26 +26,35 @@ export const getStaticProps = (async ({ params }) => {
   const productRes = await fetch(`http://django:8000/products/${params?.id}`);
   const product = await productRes.json();
 
-  // const departuresRes = await fetch(
-  //   `http://django:8000/departures/?product_id=${params?.id}`
-  // );
-  // const departure = await departuresRes.json();
+  // TO DO: fix the viewset in backend so we can fetch only departures with a particular product id
+  // OR utilise the reverse foreign key serializer to get all departures in same call as above
+  const departuresRes = await fetch(`http://django:8000/departures/`);
+  const allDepartures = await departuresRes.json();
+  const productDepartures = allDepartures?.results?.filter(
+    (d: Departure) => d.product === Number(params?.id)
+  );
 
-  return { props: { product }, revalidate: 120 };
+  return { props: { product, productDepartures }, revalidate: 120 };
 }) satisfies GetStaticProps<{
   product: Product;
 }>;
 
 export default function ProductPage({
   product,
+  productDepartures,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  // TO DO - edit Head logic once product data available
-  // console.log(departure);
+  const noDepartures = productDepartures.length === 0;
+  const allDeparturesFull = productDepartures.every(
+    (d: Departure) => d.available_pax === 0
+  );
+
   return (
     <>
-      {/* <Head>
-        {(product.departures === 0 || !!product.departuresFull) && <meta name="robots" content="noindex, nofollow" />}
-      </Head> */}
+      <Head>
+        {(noDepartures || allDeparturesFull) && (
+          <meta name="robots" content="noindex, nofollow" />
+        )}
+      </Head>
       <div>{product.name}</div>
     </>
   );

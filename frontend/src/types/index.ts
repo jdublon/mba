@@ -6,3 +6,10 @@ export type Product = {
   description: string;
   difficulty: Difficulty;
 };
+
+export type Departure = {
+  product: number;
+  start_date: string;
+  price: string;
+  available_pax: number;
+};
