@@ -24,5 +24,5 @@ export type AllDeparturesResponse = {
 
 export type DepartureCardProps = {
   departure: Departure;
-  key: string;
+  label: string;
 };

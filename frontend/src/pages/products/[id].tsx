@@ -60,7 +60,10 @@ export default function ProductPage({
         {departures && (
           <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 2xl:grid-cols-4 gap-y-4 gap-x-4">
             {departures.map((departure, index) => (
-              <DepartureCard departure={departure} key={`departure-${index}`} />
+              <DepartureCard
+                departure={departure}
+                label={`departure-${index}`}
+              />
             ))}
           </div>
         )}

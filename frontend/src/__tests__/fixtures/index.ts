@@ -57,6 +57,12 @@ export const mockAllDepartures: AllDeparturesResponse = {
       price: "2200.00",
       available_pax: 3,
     },
+    {
+      product: 3,
+      start_date: "2025-11-30",
+      price: "2900.00",
+      available_pax: 0,
+    },
   ],
 };
 
