@@ -17,7 +17,7 @@ export const Hero: FC = () => {
       />
 
       <div className="absolute bottom-0 left-0 right-0 inline-flex flex-col justify-start items-start">
-        <div className="mx-4 mb-3 sm:mb-[1.62rem]">
+        <div className="mx-4 sm:mx-8 mb-3 sm:mb-[1.62rem] max-w-[59rem]">
           <h1 className="text-white text-[2rem] sm:text-[3rem] font-extrabold font-sans leading-9 sm:leading-[3.375rem] tracking-[-0.04rem] mb-6 sm:mb-[1.62rem]">
             ISLAND HOPPING ADVENTURE IN THE GALAPAGOS
           </h1>
@@ -28,8 +28,8 @@ export const Hero: FC = () => {
           </div>
         </div>
 
-        <div className="bg-black sm:bg-transparent w-screen px-4 pt-3 sm:pt-0">
-          <p className="text-white font-serif text-base leading-[1.375rem] tracking-[-0.02rem] pb-10 sm:pb-12">
+        <div className="bg-black sm:bg-transparent w-screen px-4 sm:px-8 pt-3 sm:pt-0">
+          <p className="text-white font-serif sm:text-[1.5rem] leading-[1.375rem] sm:leading-[1.875rem] tracking-[-0.02rem] sm:tracking-[-0.03rem] pb-10 sm:pb-12 max-w-[59rem]">
             Hike, bike and snorkel this unique archipelago and encounter its
             special wildlife, on an adventure immersed in the natural world
           </p>
