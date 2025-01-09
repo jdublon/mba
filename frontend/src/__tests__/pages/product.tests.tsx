@@ -15,9 +15,7 @@ import {
 } from "../fixtures";
 import { MockDepartureCard, MockHero } from "./mock-components";
 import { DepartureCardProps, HeroProps } from "@/types";
-import { getAllProducts } from "@/helpers/getAllProducts";
-import { getProductById } from "@/helpers/getProductById";
-import { getDeparturesById } from "@/helpers/getDeparturesById";
+import { getAllProducts, getProductById, getDeparturesById } from "@/helpers";
 
 jest.mock("next/head", () => {
   return {

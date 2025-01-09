@@ -5,11 +5,8 @@ import type {
 } from "next";
 import { Departure, Product } from "@/types";
 import Head from "next/head";
-import { getProductById } from "@/helpers/getProductById";
-import { getAllProducts } from "@/helpers/getAllProducts";
-import { getDeparturesById } from "@/helpers/getDeparturesById";
-import { DepartureCard } from "@/components/DepartureCard";
-import { Hero } from "@/components/Hero";
+import { getProductById, getAllProducts, getDeparturesById } from "@/helpers";
+import { DepartureCard, Hero } from "@/components";
 
 export const getStaticPaths = (async () => {
   const allProducts = await getAllProducts();

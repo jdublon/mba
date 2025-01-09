@@ -11,7 +11,7 @@ export const Hero: FC<HeroProps> = ({ product }) => {
           from-black via-black to-transparent 
           bg-[linear-gradient(0deg,_#2A2D2C_0.09%,_rgba(42,_45,_44,_0)_59.97%)] 
           bg-cover bg-center bg-no-repeat 
-          bg-[url('/images/hero-image.jpg')] 
+          bg-[url('/images/hero-image-sm.jpg')] 
           sm:bg-[url('/images/hero-image-sm.jpg')] 
           md:bg-[url('/images/hero-image-md.jpg')] 
           lg:bg-[url('/images/hero-image-lg.jpg')]"
