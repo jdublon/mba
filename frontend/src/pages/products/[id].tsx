@@ -44,6 +44,9 @@ export default function ProductPage({
   );
 
   // TO DO - no product, show 404 page
+  if (!product) {
+    return <div>oops</div>;
+  }
 
   return (
     <>
@@ -53,7 +56,7 @@ export default function ProductPage({
         )}
       </Head>
 
-      <Hero />
+      <Hero product={product} />
       <div className="container mx-auto p-4">
         {!departures && <div>Sorry there are no trips planned right now!</div>}
         {departures && (

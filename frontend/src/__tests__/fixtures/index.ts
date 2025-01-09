@@ -10,6 +10,8 @@ export const mockProduct: Product = {
   name: "Product",
   description: "Totally wild",
   difficulty: "Challenging",
+  location: "New Zealand",
+  duration: 9,
 };
 
 export const mockId: string = "1";
@@ -18,21 +20,27 @@ export const mockAllProducts: AllProductsResponse = {
   results: [
     {
       id: 1,
-      name: "Mars",
+      name: "Mars expedition",
       description: "Kind of hot",
       difficulty: "Challenging",
+      location: "Mars",
+      duration: 99,
     },
     {
       id: 1,
-      name: "Jupiter",
+      name: "Jupiter snorkelling trip",
       description: "Far away",
       difficulty: "Moderate",
+      location: "Mars",
+      duration: 35,
     },
     {
       id: 1,
-      name: "Pluto",
+      name: "Pluto flyby",
       description: "Pretty cold",
       difficulty: "Easy",
+      location: "Pluto",
+      duration: 7,
     },
   ],
 };
