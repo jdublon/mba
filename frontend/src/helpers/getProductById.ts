@@ -4,8 +4,9 @@ export const getProductById = async (
   id?: string | string[]
 ): Promise<Product | undefined> => {
   try {
-    // TO DO: move URL to env var
-    const productRes = await fetch(`http://django:8000/products/${id}`);
+    const productRes = await fetch(
+      `${process.env.NEXT_PUBLIC_API_DOMAIN}/products/${id}`
+    );
     const product = await productRes.json();
 
     return product;

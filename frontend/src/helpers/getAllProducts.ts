@@ -2,8 +2,7 @@ import { Product } from "@/types";
 
 export const getAllProducts = async (): Promise<Product[]> => {
   try {
-    // TO DO: move URL to env var
-    const res = await fetch("http://django:8000/products");
+    const res = await fetch(`${process.env.NEXT_PUBLIC_API_DOMAIN}/products`);
     const { results } = await res.json();
 
     return results;
