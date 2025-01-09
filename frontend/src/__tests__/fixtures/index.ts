@@ -2,8 +2,10 @@ import {
   AllDeparturesResponse,
   AllProductsResponse,
   Departure,
+  Path,
   Product,
 } from "@/types";
+import { GetStaticPropsContext } from "next";
 
 export const mockProduct: Product = {
   id: 1,
@@ -27,7 +29,7 @@ export const mockAllProducts: AllProductsResponse = {
       duration: 99,
     },
     {
-      id: 1,
+      id: 2,
       name: "Jupiter snorkelling trip",
       description: "Far away",
       difficulty: "Moderate",
@@ -35,7 +37,7 @@ export const mockAllProducts: AllProductsResponse = {
       duration: 35,
     },
     {
-      id: 1,
+      id: 3,
       name: "Pluto flyby",
       description: "Pretty cold",
       difficulty: "Easy",
@@ -44,6 +46,12 @@ export const mockAllProducts: AllProductsResponse = {
     },
   ],
 };
+
+export const mockAllPaths: Path[] = [
+  { params: { id: "1" } },
+  { params: { id: "2" } },
+  { params: { id: "3" } },
+];
 
 export const mockAllDepartures: AllDeparturesResponse = {
   results: [
@@ -74,5 +82,24 @@ export const mockAllDepartures: AllDeparturesResponse = {
   ],
 };
 
+export const mockAllDeparturesFull: Departure[] = [
+  {
+    product: 1,
+    start_date: "2025-05-19",
+    price: "3918.00",
+    available_pax: 0,
+  },
+  {
+    product: 1,
+    start_date: "2025-08-10",
+    price: "1715.00",
+    available_pax: 0,
+  },
+];
+
 export const mockProductOneDepartures: Departure[] =
   mockAllDepartures.results.filter((d) => d.product === 1);
+
+export const mockContext: GetStaticPropsContext = {
+  params: { id: "1" },
+};

@@ -1,7 +1,7 @@
 import { DepartureCardProps } from "@/types";
 import { FC } from "react";
 
-export const DepartureCard: FC<DepartureCardProps> = ({ departure, label }) => {
+export const DepartureCard: FC<DepartureCardProps> = ({ departure }) => {
   const textStyles = "font-sans text-primary-green text-sm font-semibold";
   const availabilityText =
     departure.available_pax > 0
@@ -9,7 +9,7 @@ export const DepartureCard: FC<DepartureCardProps> = ({ departure, label }) => {
       : "Sorry this trip is fully booked!";
 
   return (
-    <div key={label} className="p-4 border rounded-lg shadow-md bg-white">
+    <div className="p-4 border rounded-lg shadow-md bg-white">
       <div className="space-y-2">
         <div className={textStyles}>Start Date: {departure.start_date}</div>
         <div className={textStyles}>Price: £{`${departure.price}`}</div>

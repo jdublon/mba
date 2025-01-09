@@ -26,7 +26,6 @@ export type AllDeparturesResponse = {
 
 export type DepartureCardProps = {
   departure: Departure;
-  label: string;
 };
 
 export type IconLabelProps = {
@@ -37,3 +36,5 @@ export type IconLabelProps = {
 export type HeroProps = {
   product: Product;
 };
+
+export type Path = { params: { id: string } };
