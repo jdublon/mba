@@ -18,8 +18,8 @@ export const Hero: FC = () => {
 
       <div className="absolute bottom-0 left-0 right-0 inline-flex flex-col justify-start items-start">
         <div className="mx-4 sm:mx-8 mb-3 sm:mb-[1.62rem] max-w-[59rem]">
-          <h1 className="text-white text-[2rem] sm:text-[3rem] font-extrabold font-sans leading-9 sm:leading-[3.375rem] tracking-[-0.04rem] mb-6 sm:mb-[1.62rem]">
-            ISLAND HOPPING ADVENTURE IN THE GALAPAGOS
+          <h1 className="text-white text-[2rem] sm:text-[3rem] font-extrabold font-sans leading-9 sm:leading-[3.375rem] tracking-[-0.04rem] mb-6 sm:mb-[1.62rem] uppercase">
+            Island hopping adventure in the Galapagos
           </h1>
           <div className="flex gap-6 flex-wrap">
             <IconLabel icon="location" label="Galapagos islands, Ecuador" />
