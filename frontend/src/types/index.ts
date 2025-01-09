@@ -26,3 +26,8 @@ export type DepartureCardProps = {
   departure: Departure;
   label: string;
 };
+
+export type IconLabelProps = {
+  icon: "duration" | "difficulty" | "location";
+  label: string;
+};
