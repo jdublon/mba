@@ -1,4 +1,4 @@
-import { getDeparturesById } from "@/helpers/getDeparturesById";
+import { getDeparturesById } from "@/helpers";
 import { waitFor } from "@testing-library/react";
 import fetch, { enableFetchMocks } from "jest-fetch-mock";
 import {

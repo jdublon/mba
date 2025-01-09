@@ -1,4 +1,4 @@
-import { getAllProducts } from "@/helpers/getAllProducts";
+import { getAllProducts } from "@/helpers";
 import { waitFor } from "@testing-library/react";
 import fetch, { enableFetchMocks } from "jest-fetch-mock";
 import { mockAllProducts } from "../fixtures";
