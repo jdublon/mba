@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Hero SHOULD match snapshot WHENrendered 1`] = `
+exports[`Component: Hero SHOULD match snapshot WHEN rendered 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>
@@ -20,25 +20,19 @@ exports[`Component: Hero SHOULD match snapshot WHENrendered 1`] = `
             <h1
               class="text-white text-[2rem] sm:text-[3rem] font-extrabold font-sans leading-9 sm:leading-[3.375rem] tracking-[-0.04rem] mb-6 sm:mb-[1.62rem] uppercase"
             >
-              Island hopping adventure in the Galapagos
+              Product
             </h1>
             <div
               class="flex gap-6 flex-wrap"
             >
-              <div
-                data-testid="location"
-              >
-                Galapagos islands, Ecuador
+              <div>
+                New Zealand
               </div>
-              <div
-                data-testid="duration"
-              >
-                9 nights
+              <div>
+                9
               </div>
-              <div
-                data-testid="difficulty"
-              >
-                Easy
+              <div>
+                Challenging
               </div>
             </div>
           </div>
@@ -48,7 +42,7 @@ exports[`Component: Hero SHOULD match snapshot WHENrendered 1`] = `
             <p
               class="text-white font-serif sm:text-[1.5rem] leading-[1.375rem] sm:leading-[1.875rem] tracking-[-0.02rem] sm:tracking-[-0.03rem] pb-10 sm:pb-12 max-w-[59rem]"
             >
-              Hike, bike and snorkel this unique archipelago and encounter its special wildlife, on an adventure immersed in the natural world
+              Totally wild
             </p>
           </div>
         </div>
@@ -71,25 +65,19 @@ exports[`Component: Hero SHOULD match snapshot WHENrendered 1`] = `
           <h1
             class="text-white text-[2rem] sm:text-[3rem] font-extrabold font-sans leading-9 sm:leading-[3.375rem] tracking-[-0.04rem] mb-6 sm:mb-[1.62rem] uppercase"
           >
-            Island hopping adventure in the Galapagos
+            Product
           </h1>
           <div
             class="flex gap-6 flex-wrap"
           >
-            <div
-              data-testid="location"
-            >
-              Galapagos islands, Ecuador
+            <div>
+              New Zealand
             </div>
-            <div
-              data-testid="duration"
-            >
-              9 nights
+            <div>
+              9
             </div>
-            <div
-              data-testid="difficulty"
-            >
-              Easy
+            <div>
+              Challenging
             </div>
           </div>
         </div>
@@ -99,7 +87,7 @@ exports[`Component: Hero SHOULD match snapshot WHENrendered 1`] = `
           <p
             class="text-white font-serif sm:text-[1.5rem] leading-[1.375rem] sm:leading-[1.875rem] tracking-[-0.02rem] sm:tracking-[-0.03rem] pb-10 sm:pb-12 max-w-[59rem]"
           >
-            Hike, bike and snorkel this unique archipelago and encounter its special wildlife, on an adventure immersed in the natural world
+            Totally wild
           </p>
         </div>
       </div>
