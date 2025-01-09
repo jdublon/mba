@@ -7,23 +7,22 @@ from products.models import Departure, Product
 from products.constants.constants import PRODUCT_DESCRIPTIONS, PRODUCT_LOCATIONS, PRODUCT_SUBJECTS, PRODUCT_VERBS, PRODUCT_OBJECTS, PRODUCT_ADJECTIVES, DIFFICULTY_LEVELS
 
 def generate_random_product():
-    s = random.choice(PRODUCT_SUBJECTS)
-    v = random.choice(PRODUCT_VERBS)
-    o = random.choice(PRODUCT_OBJECTS)
-    a = random.choice(PRODUCT_ADJECTIVES)
+    subjects = random.choice(PRODUCT_SUBJECTS)
+    verbs = random.choice(PRODUCT_VERBS)
+    objects = random.choice(PRODUCT_OBJECTS)
+    adjectives = random.choice(PRODUCT_ADJECTIVES)
 
     return Product(
-        name=f"{s} {v} {o} {a}.",
+        name=f"{subjects} {verbs} {objects} {adjectives}.",
         description=random.choice(PRODUCT_DESCRIPTIONS),
         location=random.choice(PRODUCT_LOCATIONS),
         difficulty=random.choice(DIFFICULTY_LEVELS),
         duration=random.randint(3, 14),
     )
 
-# Helper function to generate random departure data
 def generate_random_departure(product):
     max_pax = random.randint(5, 20)
-    n_ds = random.randint(0, 20)
+    number_of_departures = random.randint(0, 20)
     
     return [
         Departure(
@@ -33,10 +32,9 @@ def generate_random_departure(product):
             booked_pax=random.randint(0, max_pax),
             max_pax=max_pax,
         )
-        for _ in range(n_ds)
+        for _ in range(number_of_departures)
     ]
 
-# Main command class
 class Command(BaseCommand):
     help = "Populate the database with products and departures."
 
