@@ -10,6 +10,8 @@ class ProductSerializer(serializers.ModelSerializer):
             "name",
             "description",
             "difficulty",
+            "location",
+            "duration"
         ]
 
 
