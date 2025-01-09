@@ -3,6 +3,7 @@ import { render } from "@testing-library/react";
 import { Hero } from "@/components/Hero";
 import { IconLabelProps } from "@/types";
 import { MockIconLabel } from "./mock-components";
+import { mockProduct } from "@/__tests__/fixtures";
 
 jest.mock("../../../components/IconLabel", () => ({
   __esModule: true,
@@ -11,17 +12,17 @@ jest.mock("../../../components/IconLabel", () => ({
 
 describe("Component: Hero", () => {
   it("SHOULD match snapshot WHEN rendered", () => {
-    const component = render(<Hero />);
+    const component = render(<Hero product={mockProduct} />);
     expect(component).toMatchSnapshot();
   });
 
   it("SHOULD render info as expected WHEN rendered", () => {
-    const { getByTestId, getByText } = render(<Hero />);
+    const { getByText } = render(<Hero product={mockProduct} />);
 
-    expect(getByTestId("location"));
-    expect(getByTestId("duration"));
-    expect(getByTestId("difficulty"));
-    expect(getByText(/Island hopping adventure/));
-    expect(getByText(/Hike, bike and snorkel/));
+    expect(getByText(mockProduct.location));
+    expect(getByText(mockProduct.duration));
+    expect(getByText(mockProduct.difficulty));
+    expect(getByText(mockProduct.name));
+    expect(getByText(mockProduct.description));
   });
 });

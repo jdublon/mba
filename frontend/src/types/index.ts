@@ -5,6 +5,8 @@ export type Product = {
   name: string;
   description: string;
   difficulty: Difficulty;
+  location: string;
+  duration: number;
 };
 
 export type AllProductsResponse = {
@@ -30,4 +32,8 @@ export type DepartureCardProps = {
 export type IconLabelProps = {
   icon: "duration" | "difficulty" | "location";
   label: string;
+};
+
+export type HeroProps = {
+  product: Product;
 };
