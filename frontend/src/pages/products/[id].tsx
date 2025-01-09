@@ -43,9 +43,10 @@ export default function ProductPage({
     (d: Departure) => d.available_pax === 0
   );
 
-  // TO DO - no product, show 404 page
   if (!product) {
-    return <div>oops</div>;
+    return {
+      notFound: true,
+    };
   }
 
   return (
