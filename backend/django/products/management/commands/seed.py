@@ -4,36 +4,8 @@ from datetime import timedelta
 from django.core.management.base import BaseCommand
 from django.utils import timezone
 from products.models import Departure, Product
-from products.constants.constants import PRODUCT_DESCRIPTIONS, PRODUCT_LOCATIONS, PRODUCT_SUBJECTS, PRODUCT_VERBS, PRODUCT_OBJECTS, PRODUCT_ADJECTIVES, DIFFICULTY_LEVELS
+from products.utils import generate_random_product, generate_random_departure
 
-def generate_random_product():
-    subjects = random.choice(PRODUCT_SUBJECTS)
-    verbs = random.choice(PRODUCT_VERBS)
-    objects = random.choice(PRODUCT_OBJECTS)
-    adjectives = random.choice(PRODUCT_ADJECTIVES)
-
-    return Product(
-        name=f"{subjects} {verbs} {objects} {adjectives}.",
-        description=random.choice(PRODUCT_DESCRIPTIONS),
-        location=random.choice(PRODUCT_LOCATIONS),
-        difficulty=random.choice(DIFFICULTY_LEVELS),
-        duration=random.randint(3, 14),
-    )
-
-def generate_random_departure(product):
-    max_pax = random.randint(5, 20)
-    number_of_departures = random.randint(0, 20)
-    
-    return [
-        Departure(
-            product=product,
-            start_date=timezone.now().date() + timedelta(days=random.randint(1, 365)),
-            price=Decimal(round(random.randint(250, 5000), 2)),
-            booked_pax=random.randint(0, max_pax),
-            max_pax=max_pax,
-        )
-        for _ in range(number_of_departures)
-    ]
 
 class Command(BaseCommand):
     help = "Populate the database with products and departures."
