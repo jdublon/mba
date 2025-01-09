@@ -1,0 +1,160 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Component: Hero SHOULD match snapshot WHENrendered 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="relative w-full h-screen overflow-hidden"
+      >
+        <div
+          class="absolute top-0 left-0 right-0 bottom-0  bg-gradient-to-t  from-black via-black to-transparent  bg-[linear-gradient(0deg,_#2A2D2C_0.09%,_rgba(42,_45,_44,_0)_59.97%)]  bg-cover bg-center bg-no-repeat  bg-[url('/images/hero-image.jpg')]  sm:bg-[url('/images/hero-image-sm.jpg')]  md:bg-[url('/images/hero-image-md.jpg')]  lg:bg-[url('/images/hero-image-lg.jpg')]"
+        />
+        <div
+          class="absolute bottom-0 left-0 right-0 inline-flex flex-col justify-start items-start"
+        >
+          <div
+            class="mx-4 sm:mx-8 mb-3 sm:mb-[1.62rem] max-w-[59rem]"
+          >
+            <h1
+              class="text-white text-[2rem] sm:text-[3rem] font-extrabold font-sans leading-9 sm:leading-[3.375rem] tracking-[-0.04rem] mb-6 sm:mb-[1.62rem] uppercase"
+            >
+              Island hopping adventure in the Galapagos
+            </h1>
+            <div
+              class="flex gap-6 flex-wrap"
+            >
+              <div
+                data-testid="location"
+              >
+                Galapagos islands, Ecuador
+              </div>
+              <div
+                data-testid="duration"
+              >
+                9 nights
+              </div>
+              <div
+                data-testid="difficulty"
+              >
+                Easy
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-black sm:bg-transparent w-screen px-4 sm:px-8 pt-3 sm:pt-0"
+          >
+            <p
+              class="text-white font-serif sm:text-[1.5rem] leading-[1.375rem] sm:leading-[1.875rem] tracking-[-0.02rem] sm:tracking-[-0.03rem] pb-10 sm:pb-12 max-w-[59rem]"
+            >
+              Hike, bike and snorkel this unique archipelago and encounter its special wildlife, on an adventure immersed in the natural world
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="relative w-full h-screen overflow-hidden"
+    >
+      <div
+        class="absolute top-0 left-0 right-0 bottom-0  bg-gradient-to-t  from-black via-black to-transparent  bg-[linear-gradient(0deg,_#2A2D2C_0.09%,_rgba(42,_45,_44,_0)_59.97%)]  bg-cover bg-center bg-no-repeat  bg-[url('/images/hero-image.jpg')]  sm:bg-[url('/images/hero-image-sm.jpg')]  md:bg-[url('/images/hero-image-md.jpg')]  lg:bg-[url('/images/hero-image-lg.jpg')]"
+      />
+      <div
+        class="absolute bottom-0 left-0 right-0 inline-flex flex-col justify-start items-start"
+      >
+        <div
+          class="mx-4 sm:mx-8 mb-3 sm:mb-[1.62rem] max-w-[59rem]"
+        >
+          <h1
+            class="text-white text-[2rem] sm:text-[3rem] font-extrabold font-sans leading-9 sm:leading-[3.375rem] tracking-[-0.04rem] mb-6 sm:mb-[1.62rem] uppercase"
+          >
+            Island hopping adventure in the Galapagos
+          </h1>
+          <div
+            class="flex gap-6 flex-wrap"
+          >
+            <div
+              data-testid="location"
+            >
+              Galapagos islands, Ecuador
+            </div>
+            <div
+              data-testid="duration"
+            >
+              9 nights
+            </div>
+            <div
+              data-testid="difficulty"
+            >
+              Easy
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-black sm:bg-transparent w-screen px-4 sm:px-8 pt-3 sm:pt-0"
+        >
+          <p
+            class="text-white font-serif sm:text-[1.5rem] leading-[1.375rem] sm:leading-[1.875rem] tracking-[-0.02rem] sm:tracking-[-0.03rem] pb-10 sm:pb-12 max-w-[59rem]"
+          >
+            Hike, bike and snorkel this unique archipelago and encounter its special wildlife, on an adventure immersed in the natural world
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
