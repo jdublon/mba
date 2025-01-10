@@ -24,7 +24,10 @@ export const Hero: FC<HeroProps> = ({ product }) => {
           </h1>
           <div className="flex gap-6 flex-wrap">
             <IconLabel icon="location" label={product.location} />
-            <IconLabel icon="duration" label={product.duration.toString()} />
+            <IconLabel
+              icon="duration"
+              label={`${product.duration.toString()} nights`}
+            />
             <IconLabel icon="difficulty" label={product.difficulty} />
           </div>
         </div>
