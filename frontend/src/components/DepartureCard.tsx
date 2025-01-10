@@ -1,6 +1,9 @@
 import { DepartureCardProps } from "@/types";
 import { FC } from "react";
 
+// TO DO: derive end date from product duration
+// TO DO: format dates and improve styling
+
 export const DepartureCard: FC<DepartureCardProps> = ({ departure }) => {
   const textStyles = "font-sans text-primary-green text-sm font-semibold";
   const availabilityText =

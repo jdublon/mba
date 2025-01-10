@@ -5,7 +5,7 @@ import type {
 } from "next";
 import { Departure, Product } from "@/types";
 import Head from "next/head";
-import { getProductById, getAllProducts, getDeparturesById } from "@/helpers";
+import { getProductById, getAllProducts } from "@/helpers";
 import { DepartureCard, Hero } from "@/components";
 
 export const getStaticPaths = (async () => {
@@ -23,26 +23,24 @@ export const getStaticPaths = (async () => {
 
 export const getStaticProps = (async ({ params }) => {
   const product = await getProductById(params?.id);
-  const departures = await getDeparturesById(params?.id);
 
-  return { props: { product, departures }, revalidate: 60 };
+  return { props: { product }, revalidate: 60 };
 }) satisfies GetStaticProps<{
   product?: Product;
-  departures?: Departure[];
 }>;
 
 export default function ProductPage({
   product,
-  departures,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
-  const noDepartures = !departures || departures?.length === 0;
-  const allDeparturesFull = departures?.every(
-    (d: Departure) => d.available_pax === 0
-  );
-
   if (!product) {
     return null;
   }
+
+  const { departures } = product;
+  const noDepartures = departures?.length === 0;
+  const allDeparturesFull = departures?.every(
+    (d: Departure) => d.available_pax === 0
+  );
 
   return (
     <>

@@ -7,9 +7,10 @@ export type Product = {
   difficulty: Difficulty;
   location: string;
   duration: number;
+  departures: Departure[];
 };
 
-export type AllProductsResponse = {
+export type ProductsResponse = {
   results: Product[];
 };
 
@@ -20,7 +21,7 @@ export type Departure = {
   available_pax: number;
 };
 
-export type AllDeparturesResponse = {
+export type DeparturesResponse = {
   results: Departure[];
 };
 
