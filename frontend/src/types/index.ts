@@ -40,3 +40,5 @@ export type HeroProps = {
 };
 
 export type Path = { params: { id: string } };
+
+export type DepartureFields = { label: string; value: string };
