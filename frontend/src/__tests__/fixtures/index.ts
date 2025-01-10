@@ -1,6 +1,6 @@
 import {
-  AllDeparturesResponse,
-  AllProductsResponse,
+  DeparturesResponse,
+  ProductsResponse,
   Departure,
   Path,
   Product,
@@ -18,7 +18,7 @@ export const mockProduct: Product = {
 
 export const mockId: string = "1";
 
-export const mockAllProducts: AllProductsResponse = {
+export const mockAllProducts: ProductsResponse = {
   results: [
     {
       id: 1,
@@ -53,7 +53,7 @@ export const mockAllPaths: Path[] = [
   { params: { id: "3" } },
 ];
 
-export const mockAllDepartures: AllDeparturesResponse = {
+export const mockAllDepartures: DeparturesResponse = {
   results: [
     {
       product: 1,
@@ -99,6 +99,10 @@ export const mockAllDeparturesFull: Departure[] = [
 
 export const mockProductOneDepartures: Departure[] =
   mockAllDepartures.results.filter((d) => d.product === 1);
+
+export const mockProductOneDeparturesResponse: DeparturesResponse = {
+  results: mockProductOneDepartures,
+};
 
 export const mockContext: GetStaticPropsContext = {
   params: { id: "1" },

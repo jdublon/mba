@@ -9,7 +9,7 @@ export type Product = {
   duration: number;
 };
 
-export type AllProductsResponse = {
+export type ProductsResponse = {
   results: Product[];
 };
 
@@ -20,7 +20,7 @@ export type Departure = {
   available_pax: number;
 };
 
-export type AllDeparturesResponse = {
+export type DeparturesResponse = {
   results: Departure[];
 };
 

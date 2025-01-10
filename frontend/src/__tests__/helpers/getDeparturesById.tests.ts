@@ -3,20 +3,22 @@ import { waitFor } from "@testing-library/react";
 import fetch, { enableFetchMocks } from "jest-fetch-mock";
 import {
   mockId,
-  mockAllDepartures,
   mockProductOneDepartures,
+  mockProductOneDeparturesResponse,
 } from "../fixtures";
 enableFetchMocks();
 
 describe("Helper: getDeparturesById", () => {
-  it("SHOULD call the correct endpoint and return departures with the correct product id WHEN id is passed", async () => {
-    fetch.once(JSON.stringify(mockAllDepartures), { status: 200 });
+  it("SHOULD call the correct endpoint and return nested results object WHEN id is passed", async () => {
+    fetch.once(JSON.stringify(mockProductOneDeparturesResponse), {
+      status: 200,
+    });
 
     const res = await getDeparturesById(mockId);
 
     await waitFor(() => {
       expect(fetch).toHaveBeenCalledWith(
-        `${process.env.NEXT_PUBLIC_API_DOMAIN}/departures/`
+        `${process.env.NEXT_PUBLIC_API_DOMAIN}/departures/?product=${mockId}`
       );
       expect(res).toEqual(mockProductOneDepartures);
     });

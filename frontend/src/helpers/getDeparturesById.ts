@@ -4,18 +4,13 @@ export const getDeparturesById = async (
   id?: string | string[]
 ): Promise<Departure[] | undefined> => {
   try {
-    // TO DO: fix the viewset in backend so we can fetch only departures with a particular product id
-    // OR utilise the reverse foreign key serializer to get all departures in same call as above
+    // TO DO: utilise the reverse foreign key serializer to get all departures in same call as above
     const departuresRes = await fetch(
-      `${process.env.NEXT_PUBLIC_API_DOMAIN}/departures/`
+      `${process.env.NEXT_PUBLIC_API_DOMAIN}/departures/?product=${id}`
     );
-    const allDepartures = await departuresRes.json();
+    const { results } = await departuresRes.json();
 
-    const productDepartures = allDepartures?.results?.filter(
-      (d: Departure) => d.product === Number(id)
-    );
-
-    return productDepartures;
+    return results;
   } catch (error) {
     console.log(`Error fetching departures for product id ${id}: `, error);
     return undefined;
