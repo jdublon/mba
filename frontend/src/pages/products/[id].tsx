@@ -36,7 +36,6 @@ export default function ProductPage({
   departures,
 }: InferGetStaticPropsType<typeof getStaticProps>) {
   const noDepartures = !departures || departures?.length === 0;
-  console.log(departures, "<---DEPS");
   const allDeparturesFull = departures?.every(
     (d: Departure) => d.available_pax === 0
   );
