@@ -7,6 +7,7 @@ export type Product = {
   difficulty: Difficulty;
   location: string;
   duration: number;
+  departures: Departure[];
 };
 
 export type ProductsResponse = {
