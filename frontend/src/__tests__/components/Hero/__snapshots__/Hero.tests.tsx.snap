@@ -29,7 +29,7 @@ exports[`Component: Hero SHOULD match snapshot WHEN rendered 1`] = `
                 New Zealand
               </div>
               <div>
-                9
+                9 nights
               </div>
               <div>
                 Challenging
@@ -74,7 +74,7 @@ exports[`Component: Hero SHOULD match snapshot WHEN rendered 1`] = `
               New Zealand
             </div>
             <div>
-              9
+              9 nights
             </div>
             <div>
               Challenging

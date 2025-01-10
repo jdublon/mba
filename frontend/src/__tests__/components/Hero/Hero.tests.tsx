@@ -20,7 +20,7 @@ describe("Component: Hero", () => {
     const { getByText } = render(<Hero product={mockProduct} />);
 
     expect(getByText(mockProduct.location));
-    expect(getByText(mockProduct.duration));
+    expect(getByText(`${mockProduct.duration} nights`));
     expect(getByText(mockProduct.difficulty));
     expect(getByText(mockProduct.name));
     expect(getByText(mockProduct.description));

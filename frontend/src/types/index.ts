@@ -27,6 +27,7 @@ export type DeparturesResponse = {
 
 export type DepartureCardProps = {
   departure: Departure;
+  duration: number;
 };
 
 export type IconLabelProps = {
@@ -39,3 +40,5 @@ export type HeroProps = {
 };
 
 export type Path = { params: { id: string } };
+
+export type DepartureFields = { label: string; value: string };
