@@ -11,3 +11,4 @@ class ProductViewSet(viewsets.ModelViewSet):
 class DepartureViewSet(viewsets.ModelViewSet):
     serializer_class = DepartureSerializer
     queryset = Departure.objects.all()
+    filterset_fields = ['product']
