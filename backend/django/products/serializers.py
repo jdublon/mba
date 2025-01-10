@@ -2,19 +2,6 @@ from rest_framework import serializers
 from .models import Product, Departure
 
 
-class ProductSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Product
-        fields = [
-            "id",
-            "name",
-            "description",
-            "difficulty",
-            "location",
-            "duration"
-        ]
-
-
 class DepartureSerializer(serializers.ModelSerializer):
     class Meta:
         model = Departure
@@ -24,3 +11,21 @@ class DepartureSerializer(serializers.ModelSerializer):
             "price",
             "available_pax"
         ]
+
+
+class ProductSerializer(serializers.ModelSerializer):
+    departures = DepartureSerializer(many=True, read_only=True)
+
+    class Meta:
+        model = Product
+        fields = [
+            "id",
+            "name",
+            "description",
+            "difficulty",
+            "location",
+            "duration", 
+            "departures"
+        ]
+
+
