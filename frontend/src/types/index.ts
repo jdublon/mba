@@ -27,6 +27,7 @@ export type DeparturesResponse = {
 
 export type DepartureCardProps = {
   departure: Departure;
+  duration: number;
 };
 
 export type IconLabelProps = {
