@@ -11,7 +11,9 @@ describe("Helper: getAllProducts", () => {
     const res = await getAllProducts();
 
     await waitFor(() => {
-      expect(fetch).toHaveBeenCalledWith("http://django:8000/products");
+      expect(fetch).toHaveBeenCalledWith(
+        `${process.env.NEXT_PUBLIC_API_DOMAIN}/products`
+      );
       expect(res).toEqual(mockAllProducts.results);
     });
   });
