@@ -21,6 +21,12 @@ module.exports = {
       letterSpacing: {
         tightest: "-0.02rem",
       },
+      backgroundImage: {
+        "hero-xs": "url('/images/hero-image-xs.jpg')",
+        "hero-sm": "url('/images/hero-image-sm.jpg')",
+        "hero-md": "url('/images/hero-image-md.jpg')",
+        "hero-lg": "url('/images/hero-image-lg.jpg')",
+      },
     },
   },
   plugins: [],

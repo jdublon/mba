@@ -7,14 +7,14 @@ export const Hero: FC<HeroProps> = ({ product }) => {
     <div className="relative w-full h-screen overflow-hidden">
       <div
         className="absolute top-0 left-0 right-0 bottom-0 
-          bg-gradient-to-t 
-          from-black via-black to-transparent 
-          bg-[linear-gradient(0deg,_#2A2D2C_0.09%,_rgba(42,_45,_44,_0)_59.97%)] 
-          bg-cover bg-center bg-no-repeat 
-          bg-[url('/images/hero-image-sm.jpg')] 
-          sm:bg-[url('/images/hero-image-sm.jpg')] 
-          md:bg-[url('/images/hero-image-md.jpg')] 
-          lg:bg-[url('/images/hero-image-lg.jpg')]"
+        bg-gradient-to-t 
+        from-black via-black to-transparent 
+        bg-[linear-gradient(0deg,_#2A2D2C_0.09%,_rgba(42,_45,_44,_0)_59.97%)] 
+        bg-cover bg-center bg-no-repeat
+        bg-hero-xs
+        sm:bg-hero-sm
+        md:bg-hero-md
+        lg:bg-hero-lg"
       />
 
       <div className="absolute bottom-0 left-0 right-0 inline-flex flex-col justify-start items-start">
