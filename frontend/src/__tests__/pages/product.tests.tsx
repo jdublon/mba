@@ -5,17 +5,16 @@ import ProductPage, {
   getStaticProps,
 } from "../../pages/products/[id]";
 import {
-  mockAllDepartures,
-  mockAllDeparturesFull,
   mockAllPaths,
   mockAllProducts,
   mockContext,
   mockProduct,
-  mockProductOneDepartures,
+  mockProductDeparturesFull,
+  mockProductNoDepartures,
 } from "../fixtures";
 import { MockDepartureCard, MockHero } from "./mock-components";
 import { DepartureCardProps, HeroProps } from "@/types";
-import { getAllProducts, getProductById, getDeparturesById } from "@/helpers";
+import { getAllProducts, getProductById } from "@/helpers";
 
 jest.mock("next/head", () => {
   return {
@@ -40,12 +39,10 @@ jest.mock("../../helpers/getAllProducts");
 const mockGetAllProducts = getAllProducts as jest.Mock;
 jest.mock("../../helpers/getProductById");
 const mockGetProductById = getProductById as jest.Mock;
-jest.mock("../../helpers/getDeparturesById");
-const mockGetDeparturesById = getDeparturesById as jest.Mock;
 
 describe("Product Page", () => {
   it("SHOULD set the robots meta tag to no index, no follow WHEN product has no departures", async () => {
-    render(<ProductPage product={mockProduct} departures={undefined} />);
+    render(<ProductPage product={mockProductNoDepartures} />);
 
     await waitFor(() => {
       const metaTag = document.head.querySelector('meta[name="robots"]');
@@ -54,9 +51,7 @@ describe("Product Page", () => {
   });
 
   it("SHOULD set the robots meta tag to no index, no follow WHEN all product departures are full", () => {
-    render(
-      <ProductPage product={mockProduct} departures={mockAllDeparturesFull} />
-    );
+    render(<ProductPage product={mockProductDeparturesFull} />);
 
     const metaTag = document.head.querySelector('meta[name="robots"]');
     expect(metaTag).toHaveAttribute("content", "noindex, nofollow");
@@ -64,7 +59,7 @@ describe("Product Page", () => {
 
   it("SHOULD render content as expected WHEN product has no departures", () => {
     const { getByText, queryAllByText } = render(
-      <ProductPage product={mockProduct} departures={undefined} />
+      <ProductPage product={mockProductNoDepartures} />
     );
     expect(getByText(mockProduct.name));
     expect(getByText("Sorry there are no trips planned right now!"));
@@ -75,10 +70,7 @@ describe("Product Page", () => {
 
   it("SHOULD render content as expected WHEN product has departures", () => {
     const { getByText, queryByText, getAllByText } = render(
-      <ProductPage
-        product={mockProduct}
-        departures={mockAllDepartures.results}
-      />
+      <ProductPage product={mockProduct} />
     );
     expect(getByText(mockProduct.name));
     expect(
@@ -104,14 +96,12 @@ describe("Product Page - getStaticPaths", () => {
 describe("Product Page - getStaticProps", () => {
   it("SHOULD call the getProductById and getDepartures helpers and return props in correct format WHEN invoked", async () => {
     mockGetProductById.mockReturnValueOnce(mockProduct);
-    mockGetDeparturesById.mockReturnValueOnce(mockProductOneDepartures);
 
     const res = await getStaticProps(mockContext);
 
     expect(mockGetProductById).toHaveBeenCalledTimes(1);
-    expect(mockGetDeparturesById).toHaveBeenCalledTimes(1);
     expect(res).toEqual({
-      props: { product: mockProduct, departures: mockProductOneDepartures },
+      props: { product: mockProduct },
       revalidate: 60,
     });
   });

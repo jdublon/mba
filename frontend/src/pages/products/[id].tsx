@@ -37,7 +37,7 @@ export default function ProductPage({
   }
 
   const { departures } = product;
-  const noDepartures = !departures || departures?.length === 0;
+  const noDepartures = departures?.length === 0;
   const allDeparturesFull = departures?.every(
     (d: Departure) => d.available_pax === 0
   );
