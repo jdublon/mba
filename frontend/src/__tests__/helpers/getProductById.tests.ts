@@ -12,7 +12,7 @@ describe("Helper: getProductById", () => {
 
     await waitFor(() => {
       expect(fetch).toHaveBeenCalledWith(
-        `http://django:8000/products/${mockId}`
+        `${process.env.NEXT_PUBLIC_API_DOMAIN}/products/${mockId}`
       );
       expect(res).toEqual(mockProduct);
     });

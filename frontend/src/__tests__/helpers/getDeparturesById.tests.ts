@@ -15,7 +15,9 @@ describe("Helper: getDeparturesById", () => {
     const res = await getDeparturesById(mockId);
 
     await waitFor(() => {
-      expect(fetch).toHaveBeenCalledWith(`http://django:8000/departures/`);
+      expect(fetch).toHaveBeenCalledWith(
+        `${process.env.NEXT_PUBLIC_API_DOMAIN}/departures/`
+      );
       expect(res).toEqual(mockProductOneDepartures);
     });
   });
