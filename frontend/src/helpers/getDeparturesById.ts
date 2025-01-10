@@ -6,7 +6,9 @@ export const getDeparturesById = async (
   try {
     // TO DO: fix the viewset in backend so we can fetch only departures with a particular product id
     // OR utilise the reverse foreign key serializer to get all departures in same call as above
-    const departuresRes = await fetch(`http://django:8000/departures/`);
+    const departuresRes = await fetch(
+      `${process.env.NEXT_PUBLIC_API_DOMAIN}/departures/`
+    );
     const allDepartures = await departuresRes.json();
 
     const productDepartures = allDepartures?.results?.filter(
