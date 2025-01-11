@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
-import { DepartureCard } from "@/components/DepartureCard";
+import { DepartureCard } from "@/components";
 import { mockAllDepartures } from "../../fixtures";
 
 describe("Component: DepartureCard", () => {

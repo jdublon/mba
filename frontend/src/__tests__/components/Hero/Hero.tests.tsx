@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
-import { Hero } from "@/components/Hero";
+import { Hero } from "@/components";
 import { IconLabelProps } from "@/types";
 import { MockIconLabel } from "./mock-components";
 import { mockProduct } from "@/__tests__/fixtures";
