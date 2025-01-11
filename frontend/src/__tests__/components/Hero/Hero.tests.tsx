@@ -1,5 +1,5 @@
 import "@testing-library/jest-dom";
-import { render } from "@testing-library/react";
+import { render, waitFor } from "@testing-library/react";
 import { Hero } from "@/components";
 import { IconLabelProps } from "@/types";
 import { MockIconLabel } from "./mock-components";
@@ -11,18 +11,18 @@ jest.mock("../../../components/IconLabel", () => ({
 }));
 
 describe("Component: Hero", () => {
-  it("SHOULD match snapshot WHEN rendered", () => {
+  it("SHOULD match snapshot WHEN rendered on mobile", () => {
     const component = render(<Hero product={mockProduct} />);
     expect(component).toMatchSnapshot();
   });
 
-  it("SHOULD render info as expected WHEN rendered", () => {
-    const { getByText } = render(<Hero product={mockProduct} />);
+  it("SHOULD render info as expected WHEN rendered", async () => {
+    const { getByText, getAllByText } = render(<Hero product={mockProduct} />);
 
     expect(getByText(mockProduct.location));
     expect(getByText(`${mockProduct.duration} nights`));
     expect(getByText(mockProduct.difficulty));
     expect(getByText(mockProduct.name));
-    expect(getByText(mockProduct.description));
+    expect(getAllByText(mockProduct.description));
   });
 });
