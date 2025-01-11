@@ -7,15 +7,12 @@ export const Hero: FC<HeroProps> = ({ product }) => (
   <div className="relative w-screen h-screen overflow-hidden flex flex-col justify-between">
     <div
       className="h-full flex flex-col justify-end
-          bg-gradient-to-t 
-          from-black via-black to-transparent 
-          bg-[linear-gradient(0deg,_#2A2D2C_0.09%,_rgba(42,_45,_44,_0)_59.97%)] 
-          bg-cover bg-center bg-no-repeat
-          bg-hero-xs
-          sm:bg-hero-sm
-          md:bg-hero-md
-          lg:bg-hero-lg
-          sm:absolute sm:top-0 sm:bottom-0 sm:left-0 sm:right-0"
+        bg-cover bg-center bg-no-repeat
+        bg-hero-xs
+        sm:bg-hero-sm
+        md:bg-hero-md
+        lg:bg-hero-lg
+        sm:absolute sm:top-0 sm:bottom-0 sm:left-0 sm:right-0"
     >
       <div className="mx-4 sm:mx-8 max-w-[59rem]">
         <h1 className="text-white text-[2rem] sm:text-[3rem] font-extrabold font-sans leading-9 sm:leading-[3.375rem] tracking-[-0.04rem] mb-6 sm:mb-[1.62rem] uppercase">
