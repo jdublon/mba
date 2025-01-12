@@ -9,7 +9,7 @@ exports[`Component: DepartureCard SHOULD match snapshot WHEN rendered 1`] = `
         class="p-4 border rounded-lg shadow-md bg-white"
       >
         <div
-          class="flex justify-between"
+          class="flex justify-between text-black"
         >
           <div
             class="w-1/2 font-sans font-semibold"
@@ -23,7 +23,7 @@ exports[`Component: DepartureCard SHOULD match snapshot WHEN rendered 1`] = `
           </div>
         </div>
         <div
-          class="flex justify-between"
+          class="flex justify-between text-black"
         >
           <div
             class="w-1/2 font-sans font-semibold"
@@ -37,7 +37,7 @@ exports[`Component: DepartureCard SHOULD match snapshot WHEN rendered 1`] = `
           </div>
         </div>
         <div
-          class="flex justify-between"
+          class="flex justify-between text-black"
         >
           <div
             class="w-1/2 font-sans font-semibold"
@@ -51,7 +51,7 @@ exports[`Component: DepartureCard SHOULD match snapshot WHEN rendered 1`] = `
           </div>
         </div>
         <div
-          class="flex justify-between"
+          class="flex justify-between text-black"
         >
           <div
             class="w-1/2 font-sans font-semibold"
@@ -72,7 +72,7 @@ exports[`Component: DepartureCard SHOULD match snapshot WHEN rendered 1`] = `
       class="p-4 border rounded-lg shadow-md bg-white"
     >
       <div
-        class="flex justify-between"
+        class="flex justify-between text-black"
       >
         <div
           class="w-1/2 font-sans font-semibold"
@@ -86,7 +86,7 @@ exports[`Component: DepartureCard SHOULD match snapshot WHEN rendered 1`] = `
         </div>
       </div>
       <div
-        class="flex justify-between"
+        class="flex justify-between text-black"
       >
         <div
           class="w-1/2 font-sans font-semibold"
@@ -100,7 +100,7 @@ exports[`Component: DepartureCard SHOULD match snapshot WHEN rendered 1`] = `
         </div>
       </div>
       <div
-        class="flex justify-between"
+        class="flex justify-between text-black"
       >
         <div
           class="w-1/2 font-sans font-semibold"
@@ -114,7 +114,7 @@ exports[`Component: DepartureCard SHOULD match snapshot WHEN rendered 1`] = `
         </div>
       </div>
       <div
-        class="flex justify-between"
+        class="flex justify-between text-black"
       >
         <div
           class="w-1/2 font-sans font-semibold"
