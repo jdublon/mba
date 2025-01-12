@@ -11,7 +11,7 @@ export const DepartureCard: FC<DepartureCardProps> = ({
   return (
     <div className="p-4 border rounded-lg shadow-md bg-white">
       {departureFields.map((field) => (
-        <div className="flex justify-between" key={field.label}>
+        <div className="flex justify-between text-black" key={field.label}>
           <div className="w-1/2 font-sans font-semibold">{field.label}</div>
           <div className="w-1/2 font-sans">{field.value}</div>
         </div>
