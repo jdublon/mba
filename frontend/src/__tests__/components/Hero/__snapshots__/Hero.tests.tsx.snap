@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Component: Hero SHOULD match snapshot WHEN rendered on mobile 1`] = `
+exports[`Component: Hero SHOULD match snapshot WHEN rendered 1`] = `
 {
   "asFragment": [Function],
   "baseElement": <body>

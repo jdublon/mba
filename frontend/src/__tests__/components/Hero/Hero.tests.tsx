@@ -11,7 +11,7 @@ jest.mock("../../../components/IconLabel", () => ({
 }));
 
 describe("Component: Hero", () => {
-  it("SHOULD match snapshot WHEN rendered on mobile", () => {
+  it("SHOULD match snapshot WHEN rendered", () => {
     const component = render(<Hero product={mockProduct} />);
     expect(component).toMatchSnapshot();
   });
