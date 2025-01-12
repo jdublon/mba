@@ -137,3 +137,9 @@ export const mockProductOneDeparturesResponse: DeparturesResponse = {
 export const mockContext: GetStaticPropsContext = {
   params: { id: "1" },
 };
+
+export const mockText: string = "A description of a lovley holiday.";
+
+export const mockTextStyles: string = "text-blue-500 font-bold";
+
+export const mockContainerStyles: string = "bg-gray-100 p-4";
