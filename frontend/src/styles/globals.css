@@ -5,6 +5,11 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --hero-gradient: linear-gradient(
+    0deg,
+    #2a2d2c 0.09%,
+    rgba(42, 45, 44, 0) 59.97%
+  );
 }
 
 @media (prefers-color-scheme: dark) {

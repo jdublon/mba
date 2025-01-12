@@ -42,3 +42,9 @@ export type HeroProps = {
 export type Path = { params: { id: string } };
 
 export type DepartureFields = { label: string; value: string };
+
+export type TextBoxProps = {
+  text: string;
+  textStyles?: string;
+  containerStyles?: string;
+};

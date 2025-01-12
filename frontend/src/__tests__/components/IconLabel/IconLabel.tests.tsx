@@ -1,6 +1,6 @@
 import "@testing-library/jest-dom";
 import { render } from "@testing-library/react";
-import { IconLabel } from "@/components/IconLabel";
+import { IconLabel } from "@/components";
 import { mockIcons } from "./fixtures";
 
 describe("Component: IconLabel", () => {
